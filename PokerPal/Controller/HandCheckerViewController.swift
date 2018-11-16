@@ -22,6 +22,7 @@ class HandCheckerViewController: UIViewController {
         target: self,
         action: #selector(HandCheckerViewController.cardPickerDone(_:))
     )
+    let cardsSpacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
     
     
     @IBOutlet var tableCards: [ImageButton]!
@@ -60,7 +61,7 @@ class HandCheckerViewController: UIViewController {
         cardPicker.isOpaque = true
         
         cardPickerToolBar.barStyle = .default
-        cardPickerToolBar.items = [cardsDoneButton]
+        cardPickerToolBar.items = [cardsSpacer, cardsDoneButton]
         cardPickerToolBar.sizeToFit()
         for card in tableCards{
             card.inputView = cardPicker
