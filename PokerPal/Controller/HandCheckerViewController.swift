@@ -11,8 +11,10 @@ import UIKit
 class HandCheckerViewController: UIViewController {
     let data = [
         ["2","3","4","5","6","7","8","9","10","J","Q","K","A"],
-        ["Hearts", "Spades", "Clubs", "Diamonds"]
+        ["Hearts", "Diamonds", "Spades", "Clubs"]
     ]
+    let suitPrefixes = ["H","D","S","C"]
+
     var lastCardTapped = 0
     
     let cardPicker = UIPickerView()
@@ -73,9 +75,18 @@ class HandCheckerViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @objc func cardPickerDone(_ sender: UIBarButtonItem ){
+        changeCard(button: tableCards[lastCardTapped])
         tableCards[lastCardTapped].resignFirstResponder()
     }
-
+    func changeCard(button: ImageButton){
+        
+        var rank = data[0][cardPicker.selectedRow(inComponent: 0)]
+        
+        var suit = suitPrefixes[cardPicker.selectedRow(inComponent: 1)]
+        
+        let newCardImage = UIImage(named: rank + suit)
+        button.setImage(newCardImage, for: UIControl.State.normal)
+    }
     
 
     /*
@@ -112,11 +123,6 @@ extension HandCheckerViewController: UIPickerViewDelegate{
 
 
 class ImageButton: UIButton{
-    
-    var pickerDataSource = [["2","3","4","5","6","7","8","9","10","J","Q","K","A"], // Ranks
-        ["Spades","Clubs","Hearts","Diamonds"]] //Suits
-    
-    
     
     private var customInputView:UIView?
     
