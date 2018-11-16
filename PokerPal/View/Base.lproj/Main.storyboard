@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PokerPal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2z-tG-JPN">
+                                <rect key="frame" x="231" y="91" width="98" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Hand Checker"/>
+                                <connections>
+                                    <segue destination="wNt-zf-gL3" kind="show" id="aPR-53-RNF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txt-cB-jI3">
+                                <rect key="frame" x="217" y="527" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="HxV-8r-JcM" kind="show" id="NXd-AT-2Q9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-201" y="158"/>
+        </scene>
+        <!--HandChecker-->
+        <scene sceneID="oQq-rW-WOy">
+            <objects>
+                <viewController title="HandChecker" id="wNt-zf-gL3" customClass="HandCheckerViewController" customModule="PokerPal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4GD-fy-CEX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MaQ-7V-iEp">
+                                <rect key="frame" x="105" y="102" width="170" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lg7-KM-inj" customClass="ImageButton" customModule="PokerPal" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="KfJ-pY-TYs"/>
+                                            <constraint firstAttribute="height" constant="100" id="muZ-yk-4je"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="10C"/>
+                                        <connections>
+                                            <action selector="holeCard1:" destination="wNt-zf-gL3" eventType="touchUpInside" id="Rgu-e1-Shn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwI-pn-mD8" customClass="ImageButton" customModule="PokerPal" customModuleProvider="target">
+                                        <rect key="frame" x="95" y="0.0" width="75" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="6hq-Yb-KbW"/>
+                                            <constraint firstAttribute="height" constant="100" id="em9-dq-BjM"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="10C"/>
+                                        <connections>
+                                            <action selector="holeCard2:" destination="wNt-zf-gL3" eventType="touchUpInside" id="2qu-Jm-JPC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ske-UF-8JB">
+                                <rect key="frame" x="5" y="283" width="370" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0eJ-Tu-Ag2" customClass="ImageButton" customModule="PokerPal" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="3B8-Mz-4Yh"/>
+                                            <constraint firstAttribute="width" constant="70" id="ToC-de-sDL"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="10C"/>
+                                        <connections>
+                                            <action selector="flop1:" destination="wNt-zf-gL3" eventType="touchUpInside" id="I0k-18-8jE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l24-CU-wS9" customClass="ImageButton" customModule="PokerPal" customModuleProvider="target">
+                                        <rect key="frame" x="75" y="0.0" width="70" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="U0v-Bt-hHa"/>
+                                            <constraint firstAttribute="height" constant="100" id="XCr-Jj-Fve"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="10C"/>
+                                        <connections>
+                                            <action selector="flop2:" destination="wNt-zf-gL3" eventType="touchUpInside" id="X5X-sH-nF2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JU6-kS-OiA" customClass="ImageButton" customModule="PokerPal" customModuleProvider="target">
+                                        <rect key="frame" x="150" y="0.0" width="70" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="IZq-xT-HbT"/>
+                                            <constraint firstAttribute="width" constant="70" id="vF2-4h-AQR"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="10C"/>
+                                        <connections>
+                                            <action selector="flop3:" destination="wNt-zf-gL3" eventType="touchUpInside" id="pzu-OI-gsS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBl-wg-cxd" customClass="ImageButton" customModule="PokerPal" customModuleProvider="target">
+                                        <rect key="frame" x="225" y="0.0" width="70" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="AGi-Rs-OUW"/>
+                                            <constraint firstAttribute="height" constant="100" id="dMp-EA-tJQ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="10C"/>
+                                        <connections>
+                                            <action selector="turn:" destination="wNt-zf-gL3" eventType="touchUpInside" id="Q7W-BG-t3x"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ga4-xl-5yV" customClass="ImageButton" customModule="PokerPal" customModuleProvider="target">
+                                        <rect key="frame" x="300" y="0.0" width="70" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="9Sa-dA-bFo"/>
+                                            <constraint firstAttribute="height" constant="100" id="ygs-Gc-hlJ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="10C"/>
+                                        <connections>
+                                            <action selector="river:" destination="wNt-zf-gL3" eventType="touchUpInside" id="bJu-D0-LYw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ske-UF-8JB" firstAttribute="top" secondItem="MaQ-7V-iEp" secondAttribute="bottom" constant="81" id="1eu-1s-INX"/>
+                            <constraint firstItem="aOO-fr-yTe" firstAttribute="trailing" secondItem="Ske-UF-8JB" secondAttribute="trailing" constant="5" id="1iA-u1-hkm"/>
+                            <constraint firstItem="Ske-UF-8JB" firstAttribute="leading" secondItem="aOO-fr-yTe" secondAttribute="leading" constant="5" id="fH7-MV-W76"/>
+                            <constraint firstItem="MaQ-7V-iEp" firstAttribute="top" secondItem="aOO-fr-yTe" secondAttribute="top" constant="82" id="lMi-LS-eXG"/>
+                            <constraint firstItem="MaQ-7V-iEp" firstAttribute="centerX" secondItem="4GD-fy-CEX" secondAttribute="centerX" id="nwB-im-FfW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aOO-fr-yTe"/>
+                    </view>
+                    <connections>
+                        <outletCollection property="tableCards" destination="lg7-KM-inj" collectionClass="NSMutableArray" id="snz-3J-upb"/>
+                        <outletCollection property="tableCards" destination="uwI-pn-mD8" collectionClass="NSMutableArray" id="xdU-Gx-Bd7"/>
+                        <outletCollection property="tableCards" destination="0eJ-Tu-Ag2" collectionClass="NSMutableArray" id="Xbw-IX-54Z"/>
+                        <outletCollection property="tableCards" destination="l24-CU-wS9" collectionClass="NSMutableArray" id="jtb-vf-98f"/>
+                        <outletCollection property="tableCards" destination="JU6-kS-OiA" collectionClass="NSMutableArray" id="0Bg-B5-PQA"/>
+                        <outletCollection property="tableCards" destination="JBl-wg-cxd" collectionClass="NSMutableArray" id="6ES-gh-c2j"/>
+                        <outletCollection property="tableCards" destination="ga4-xl-5yV" collectionClass="NSMutableArray" id="Teg-I4-4eO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gu2-rl-DVL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="656.79999999999995" y="157.87106446776613"/>
+        </scene>
+        <!--Test View Controller-->
+        <scene sceneID="s2j-pd-7Ht">
+            <objects>
+                <viewController id="HxV-8r-JcM" customClass="TestViewController" customModule="PokerPal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WpT-Na-Ohc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fkD-3e-11f">
+                                <rect key="frame" x="0.0" y="85" width="375" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rk2-Fs-4Lu"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardPicker" destination="fkD-3e-11f" id="ywh-Ew-aRY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ADn-Ur-KXd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-202" y="844"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="10C" width="691" height="1056"/>
+    </resources>
+</document>

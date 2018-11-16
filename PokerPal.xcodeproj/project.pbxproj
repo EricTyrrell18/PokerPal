@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF10646A219E08AA00FD9770 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF106469219E08AA00FD9770 /* TestViewController.swift */; };
 		FFA3DFA3219B3ABE00B55F0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA3DFA2219B3ABE00B55F0D /* AppDelegate.swift */; };
 		FFA3DFA5219B3ABE00B55F0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA3DFA4219B3ABE00B55F0D /* ViewController.swift */; };
 		FFA3DFA8219B3ABE00B55F0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFA3DFA6219B3ABE00B55F0D /* Main.storyboard */; };
@@ -14,6 +15,7 @@
 		FFA3DFAD219B3ABF00B55F0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFA3DFAC219B3ABF00B55F0D /* Assets.xcassets */; };
 		FFA3DFB0219B3ABF00B55F0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFA3DFAE219B3ABF00B55F0D /* LaunchScreen.storyboard */; };
 		FFA3DFBB219B3AC000B55F0D /* PokerPalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA3DFBA219B3AC000B55F0D /* PokerPalTests.swift */; };
+		FFA3DFCA219B3E7B00B55F0D /* HandCheckerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA3DFC9219B3E7B00B55F0D /* HandCheckerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF106469219E08AA00FD9770 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		FFA3DF9F219B3ABE00B55F0D /* PokerPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokerPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA3DFA2219B3ABE00B55F0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFA3DFA4219B3ABE00B55F0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +41,7 @@
 		FFA3DFB6219B3AC000B55F0D /* PokerPalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokerPalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA3DFBA219B3AC000B55F0D /* PokerPalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokerPalTests.swift; sourceTree = "<group>"; };
 		FFA3DFBC219B3AC000B55F0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFA3DFC9219B3E7B00B55F0D /* HandCheckerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandCheckerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +83,12 @@
 		FFA3DFA1219B3ABE00B55F0D /* PokerPal */ = {
 			isa = PBXGroup;
 			children = (
+				FFA3DFC6219B3E0C00B55F0D /* Model */,
+				FFA3DFC7219B3E1B00B55F0D /* View */,
+				FFA3DFC8219B3E2500B55F0D /* Controller */,
 				FFA3DFA2219B3ABE00B55F0D /* AppDelegate.swift */,
-				FFA3DFA4219B3ABE00B55F0D /* ViewController.swift */,
-				FFA3DFA6219B3ABE00B55F0D /* Main.storyboard */,
 				FFA3DFAC219B3ABF00B55F0D /* Assets.xcassets */,
-				FFA3DFAE219B3ABF00B55F0D /* LaunchScreen.storyboard */,
 				FFA3DFB1219B3ABF00B55F0D /* Info.plist */,
-				FFA3DFA9219B3ABE00B55F0D /* PokerPal.xcdatamodeld */,
 			);
 			path = PokerPal;
 			sourceTree = "<group>";
@@ -97,6 +100,33 @@
 				FFA3DFBC219B3AC000B55F0D /* Info.plist */,
 			);
 			path = PokerPalTests;
+			sourceTree = "<group>";
+		};
+		FFA3DFC6219B3E0C00B55F0D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFA3DFA9219B3ABE00B55F0D /* PokerPal.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FFA3DFC7219B3E1B00B55F0D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FFA3DFA6219B3ABE00B55F0D /* Main.storyboard */,
+				FFA3DFAE219B3ABF00B55F0D /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FFA3DFC8219B3E2500B55F0D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FFA3DFA4219B3ABE00B55F0D /* ViewController.swift */,
+				FFA3DFC9219B3E7B00B55F0D /* HandCheckerViewController.swift */,
+				FF106469219E08AA00FD9770 /* TestViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +230,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF10646A219E08AA00FD9770 /* TestViewController.swift in Sources */,
 				FFA3DFA5219B3ABE00B55F0D /* ViewController.swift in Sources */,
+				FFA3DFCA219B3E7B00B55F0D /* HandCheckerViewController.swift in Sources */,
 				FFA3DFA3219B3ABE00B55F0D /* AppDelegate.swift in Sources */,
 				FFA3DFAB219B3ABE00B55F0D /* PokerPal.xcdatamodeld in Sources */,
 			);
