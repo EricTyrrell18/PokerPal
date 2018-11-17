@@ -18,7 +18,24 @@ class PokerPalTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    func testCard(){
+        var card1 = Card(2, 0)
+        var card2 = Card(14, 3)
 
+    }
+    func testHand(){
+        
+        var hand: Hand = Hand(cards: [Card(2,2), Card(4,2), Card(9,2), Card(6,2), Card(5,2)])
+        var preSortedHand: [Card] = [Card(2,2), Card(4,2), Card(5,2), Card(6,2) , Card(9,2)]
+        var sortedByRank = hand.getCardsSortedByRank()
+        // testing that it sorts correctly
+        for (index, element) in preSortedHand.enumerated(){
+            assert(element.rank == sortedByRank[index].rank)
+            
+        }
+        
+        
+    }
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.

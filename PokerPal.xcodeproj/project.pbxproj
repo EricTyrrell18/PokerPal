@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF0C125A21A0839F00B9F09D /* HandChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0C125921A0839F00B9F09D /* HandChecker.swift */; };
 		FF10646A219E08AA00FD9770 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF106469219E08AA00FD9770 /* TestViewController.swift */; };
+		FF32BF52219F65AB009DAB2D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32BF51219F65AB009DAB2D /* Card.swift */; };
+		FF32BF53219F65AB009DAB2D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32BF51219F65AB009DAB2D /* Card.swift */; };
+		FF32BF55219F6B89009DAB2D /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32BF54219F6B89009DAB2D /* Hand.swift */; };
+		FF32BF56219F6B89009DAB2D /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32BF54219F6B89009DAB2D /* Hand.swift */; };
 		FFA3DFA3219B3ABE00B55F0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA3DFA2219B3ABE00B55F0D /* AppDelegate.swift */; };
 		FFA3DFA5219B3ABE00B55F0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA3DFA4219B3ABE00B55F0D /* ViewController.swift */; };
 		FFA3DFA8219B3ABE00B55F0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFA3DFA6219B3ABE00B55F0D /* Main.storyboard */; };
@@ -29,7 +34,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF0C125921A0839F00B9F09D /* HandChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandChecker.swift; sourceTree = "<group>"; };
 		FF106469219E08AA00FD9770 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		FF32BF51219F65AB009DAB2D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		FF32BF54219F6B89009DAB2D /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
 		FFA3DF9F219B3ABE00B55F0D /* PokerPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokerPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA3DFA2219B3ABE00B55F0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFA3DFA4219B3ABE00B55F0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				FFA3DFA9219B3ABE00B55F0D /* PokerPal.xcdatamodeld */,
+				FF32BF51219F65AB009DAB2D /* Card.swift */,
+				FF32BF54219F6B89009DAB2D /* Hand.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -125,6 +135,7 @@
 				FFA3DFA4219B3ABE00B55F0D /* ViewController.swift */,
 				FFA3DFC9219B3E7B00B55F0D /* HandCheckerViewController.swift */,
 				FF106469219E08AA00FD9770 /* TestViewController.swift */,
+				FF0C125921A0839F00B9F09D /* HandChecker.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -231,8 +242,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF10646A219E08AA00FD9770 /* TestViewController.swift in Sources */,
+				FF32BF52219F65AB009DAB2D /* Card.swift in Sources */,
 				FFA3DFA5219B3ABE00B55F0D /* ViewController.swift in Sources */,
 				FFA3DFCA219B3E7B00B55F0D /* HandCheckerViewController.swift in Sources */,
+				FF0C125A21A0839F00B9F09D /* HandChecker.swift in Sources */,
+				FF32BF55219F6B89009DAB2D /* Hand.swift in Sources */,
 				FFA3DFA3219B3ABE00B55F0D /* AppDelegate.swift in Sources */,
 				FFA3DFAB219B3ABE00B55F0D /* PokerPal.xcdatamodeld in Sources */,
 			);
@@ -243,6 +257,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFA3DFBB219B3AC000B55F0D /* PokerPalTests.swift in Sources */,
+				FF32BF53219F65AB009DAB2D /* Card.swift in Sources */,
+				FF32BF56219F6B89009DAB2D /* Hand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
