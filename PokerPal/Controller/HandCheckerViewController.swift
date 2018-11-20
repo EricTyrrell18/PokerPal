@@ -17,6 +17,8 @@ class HandCheckerViewController: UIViewController {
 
     var lastCardTapped = 0
     
+    var cards: [Card] = []
+    
     let cardPicker = UIPickerView()
     let cardPickerToolBar = UIToolbar(frame: CGRect.zero)
     let cardsDoneButton = UIBarButtonItem(
@@ -70,7 +72,21 @@ class HandCheckerViewController: UIViewController {
             card.inputAccessoryView = cardPickerToolBar
         }
         // setting up toolbar for picker view
-
+        
+        // set up backend cards
+        cards.append(Card(10, 2))
+        cards.append(Card(11,1))
+        cards.append(Card(2,3))
+        cards.append(Card(5,0))
+        cards.append(Card(9,2))
+        cards.append(Card(5,2))
+        cards.append(Card(10,0))
+        var i = 0
+        
+        while i < cards.count - 1{
+            tableCards[i].setImage(UIImage(named: String(cards[i].rank) + suitPrefixes[cards[i].suit]), for: UIControl.State.normal)
+            i = i + 1
+        }
         
         // Do any additional setup after loading the view.
     }

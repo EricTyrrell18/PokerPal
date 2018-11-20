@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FF0C125A21A0839F00B9F09D /* HandChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0C125921A0839F00B9F09D /* HandChecker.swift */; };
+		FF0C125B21A0B51A00B9F09D /* HandChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0C125921A0839F00B9F09D /* HandChecker.swift */; };
 		FF10646A219E08AA00FD9770 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF106469219E08AA00FD9770 /* TestViewController.swift */; };
 		FF32BF52219F65AB009DAB2D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32BF51219F65AB009DAB2D /* Card.swift */; };
 		FF32BF53219F65AB009DAB2D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32BF51219F65AB009DAB2D /* Card.swift */; };
@@ -256,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF0C125B21A0B51A00B9F09D /* HandChecker.swift in Sources */,
 				FFA3DFBB219B3AC000B55F0D /* PokerPalTests.swift in Sources */,
 				FF32BF53219F65AB009DAB2D /* Card.swift in Sources */,
 				FF32BF56219F6B89009DAB2D /* Hand.swift in Sources */,
