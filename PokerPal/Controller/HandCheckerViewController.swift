@@ -31,7 +31,35 @@ class HandCheckerViewController: UIViewController {
     
     @IBOutlet var tableCards: [ImageButton]!
     
+    @IBAction func checkHand(_ sender: Any) {
+        let hc = HandChecker()
+        let hand = hc.checkHand(hand: Hand(cards: cards))
+        switch hand{
+        case .high_card:
+            handLabel.text = "High Card"
+        case .pair:
+            handLabel.text = "Pair"
+        case .two_pair:
+            handLabel.text = "Two Pair"
+        case .three_of_kind:
+            handLabel.text = "Three of a Kind"
+        case .straight:
+            handLabel.text = "Straight"
+        case .flush:
+            handLabel.text = "Flush"
+        case .full_house:
+            handLabel.text = "Full House"
+        case .four_of_kind:
+            handLabel.text = "Four of a Kind!"
+        case .straight_flush:
+            handLabel.text = "Straight Flush!"
+        default:
+            break
+        }
+        handLabel.sizeToFit()
+    }
     
+    @IBOutlet weak var handLabel: UILabel!
     
     @IBAction func holeCard1(_ sender: Any) {
         lastCardTapped = 0
@@ -99,7 +127,11 @@ class HandCheckerViewController: UIViewController {
         var rank = data[0][cardPicker.selectedRow(inComponent: 0)]
         
         var suit = suitPrefixes[cardPicker.selectedRow(inComponent: 1)]
-        
+        // Add two to the suit because the indexes go from 0-12 not 2-14
+        cards[lastCardTapped] = Card(cardPicker.selectedRow(inComponent: 0) + 2, cardPicker.selectedRow(inComponent: 1))
+        for card in cards{
+            print("rank: " + String(card.rank) + "  suit: " + String(card.suit))
+        }
         let newCardImage = UIImage(named: rank + suit)
         button.setImage(newCardImage, for: UIControl.State.normal)
     }

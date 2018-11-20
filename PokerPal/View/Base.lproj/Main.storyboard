@@ -137,6 +137,21 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2y-va-VFc">
+                                <rect key="frame" x="164" y="473" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="checkHand:" destination="wNt-zf-gL3" eventType="touchUpInside" id="7v0-BX-imv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7We-fU-198">
+                                <rect key="frame" x="169" y="558" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -149,6 +164,7 @@
                         <viewLayoutGuide key="safeArea" id="aOO-fr-yTe"/>
                     </view>
                     <connections>
+                        <outlet property="handLabel" destination="7We-fU-198" id="cdB-HS-19K"/>
                         <outletCollection property="tableCards" destination="lg7-KM-inj" collectionClass="NSMutableArray" id="snz-3J-upb"/>
                         <outletCollection property="tableCards" destination="uwI-pn-mD8" collectionClass="NSMutableArray" id="xdU-Gx-Bd7"/>
                         <outletCollection property="tableCards" destination="0eJ-Tu-Ag2" collectionClass="NSMutableArray" id="Xbw-IX-54Z"/>

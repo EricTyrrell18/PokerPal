@@ -134,9 +134,7 @@ class HandChecker{
     }
     func is_straight(hand: Hand) -> Bool{
         var cards = hand.getCardsSortedByRank()
-        for card in cards{
-            print(card.rank)
-        }
+
         // resets to 1 if the card's ranks don't increment by 1
         var incrementing_counter = 1
         var prev = Card(-1,0)
