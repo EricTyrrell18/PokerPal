@@ -87,6 +87,24 @@ class HandCheckerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // gives the green felt behind the cards
+        setBackgroundImage()
+        // initializes the cards to predetermined cards
+        //TODO: Add randomization to the cards
+        init_cards()
+        // creates and attaches the card picker to the card buttons
+        initCardPicker()
+        
+
+        
+        
+        // Do any additional setup after loading the view.
+    }
+    @objc func cardPickerDone(_ sender: UIBarButtonItem ){
+        changeCard(button: tableCards[lastCardTapped])
+        tableCards[lastCardTapped].resignFirstResponder()
+    }
+    func initCardPicker(){
         cardPicker.dataSource = self
         cardPicker.delegate = self
         cardPicker.setNeedsLayout()
@@ -96,31 +114,10 @@ class HandCheckerViewController: UIViewController {
         cardPickerToolBar.items = [cardsSpacer, cardsDoneButton]
         cardPickerToolBar.sizeToFit()
         for card in tableCards{
+            // becomes the first respnder and displays the picker when the button's tapped
             card.inputView = cardPicker
             card.inputAccessoryView = cardPickerToolBar
         }
-        // setting up toolbar for picker view
-        
-        // set up backend cards
-        cards.append(Card(10, 2))
-        cards.append(Card(11,1))
-        cards.append(Card(2,3))
-        cards.append(Card(5,0))
-        cards.append(Card(9,2))
-        cards.append(Card(5,2))
-        cards.append(Card(10,0))
-        var i = 0
-        
-        while i < cards.count - 1{
-            tableCards[i].setImage(UIImage(named: String(cards[i].rank) + suitPrefixes[cards[i].suit]), for: UIControl.State.normal)
-            i = i + 1
-        }
-        
-        // Do any additional setup after loading the view.
-    }
-    @objc func cardPickerDone(_ sender: UIBarButtonItem ){
-        changeCard(button: tableCards[lastCardTapped])
-        tableCards[lastCardTapped].resignFirstResponder()
     }
     func changeCard(button: ImageButton){
         
@@ -135,7 +132,56 @@ class HandCheckerViewController: UIViewController {
         let newCardImage = UIImage(named: rank + suit)
         button.setImage(newCardImage, for: UIControl.State.normal)
     }
-    
+    //
+    func setBackgroundImage(){
+        // Sets the background image for the view
+        
+        let background = UIImage(named: "green_felt")
+        
+        var imageView : UIImageView!
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background
+        imageView.center = view.center
+        
+        view.addSubview(imageView)
+        self.view.sendSubviewToBack(imageView)
+    }
+    // gives the cards their images and sets up the internal cards array
+    func init_cards(){
+        cards.append(Card(10, 2))
+        cards.append(Card(11,1))
+        cards.append(Card(2,3))
+        cards.append(Card(5,0))
+        cards.append(Card(9,2))
+        cards.append(Card(5,2))
+        cards.append(Card(10,0))
+        var i = 0
+        
+        while i < cards.count - 1{
+        // contains the number ie 2,3,4 . . . ,10,11,12,13
+        let raw_rank_string = String(cards[i].rank)
+        let suit_string = suitPrefixes[cards[i].suit]
+        var rank_string = raw_rank_string
+        switch rank_string{
+        case "11":
+            rank_string = "J"
+        case "12":
+            rank_string = "Q"
+        case "13":
+            rank_string = "K"
+        case "14":
+            rank_string = "A"
+        default:
+            break
+        }
+        
+        tableCards[i].setImage(UIImage(named: rank_string + suit_string), for: UIControl.State.normal)
+            i = i + 1
+        }
+        
+    }
 
     /*
     // MARK: - Navigation
